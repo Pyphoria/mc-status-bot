@@ -34,7 +34,7 @@ while True:
     except:
         message = (
             "🔴 **Server ist offline oder nicht erreichbar.**\n"
-            “Du kannst ihn hier manuell starten:\n"
+            "Du kannst ihn hier manuell starten:\n"
             "https://falixnodes.net/startserver?ip=tblockmcserver"
         )
         payload = {"content": message}
