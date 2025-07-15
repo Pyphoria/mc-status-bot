@@ -4,12 +4,12 @@ from keep_alive import keep_alive
 
 keep_alive()
 
-# Secret Environment Variables
-server_ip = os.getenv("SERVER_IP")
+# Umgebungsvariablen laden
+server_ip = os.getenv("SERVER_IP")           # Java-IP
 webhook_url = os.getenv("WEBHOOK")
 start_link = os.getenv("START_LINK")
-bedrock_ip = os.getenv("BEDROCK_IP")
-bedrock_port = os.getenv("BEDROCK_PORT")
+bedrock_ip = os.getenv("BEDROCK_IP")         # Bedrock-IP (eigenständig!)
+bedrock_port = os.getenv("BEDROCK_PORT")     # Bedrock-Port
 
 last_message = ""
 CHECK_INTERVAL = 10  # Sekunden
@@ -36,8 +36,8 @@ while True:
             "🟢 **Server ONLINE!**\n"
             f"👥 Spieler: {online}/{max_players}\n"
             f"🎮 Online: {players_list}\n\n"
-            f"📡 **Java IP:** `{server_ip}`\n"
-            f"📱 **Bedrock IP:** `{bedrock_ip}:{bedrock_port}`"
+            f"📡 **Java-IP:** `{server_ip}`\n"
+            f"📱 **Bedrock-IP:** `{bedrock_ip}:{bedrock_port}`"
         )
         payload = {"content": message}
 
@@ -45,8 +45,8 @@ while True:
         message = (
             "🔴 **Server ist offline oder nicht erreichbar.**\n"
             f"🟢 Du kannst ihn hier manuell starten:\n{start_link}\n\n"
-            f"📡 **Java IP:** `{server_ip}`\n"
-            f"📱 **Bedrock IP:** `{bedrock_ip}:{bedrock_port}`"
+            f"📡 **Java-IP:** `{server_ip}`\n"
+            f"📱 **Bedrock-IP:** `{bedrock_ip}:{bedrock_port}`"
         )
         payload = {"content": message}
 
