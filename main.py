@@ -48,7 +48,7 @@ while True:
             f"Du kannst ihn hier manuell starten:\n{start_link}\n\n"
             f"📡 **Java-IP:** `{server_ip}`\n"
             f"📱 **Bedrock-IP:** `{bedrock_ip}`\n"
-            f"🖧 **Port:** `{bedrock_port}`"
+            f"🔌 **Port:** `{bedrock_port}`"
         )
         payload = {"content": message}
 
