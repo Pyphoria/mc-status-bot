@@ -4,12 +4,12 @@ from keep_alive import keep_alive
 
 keep_alive()
 
-# Umgebungsvariablen laden
-server_ip = os.getenv("SERVER_IP")           # Java-IP
+# Umgebungsvariablen
+server_ip = os.getenv("SERVER_IP")           # z. B. tblockmcserver.falixsrv.me:31703
 webhook_url = os.getenv("WEBHOOK")
 start_link = os.getenv("START_LINK")
-bedrock_ip = os.getenv("BEDROCK_IP")         # Bedrock-IP (eigenständig!)
-bedrock_port = os.getenv("BEDROCK_PORT")     # Bedrock-Port
+bedrock_ip = os.getenv("BEDROCK_IP")         # z. B. tblockmcserver.falixsrv.me
+bedrock_port = os.getenv("BEDROCK_PORT")     # z. B. 31703
 
 last_message = ""
 CHECK_INTERVAL = 10  # Sekunden
@@ -37,16 +37,18 @@ while True:
             f"👥 Spieler: {online}/{max_players}\n"
             f"🎮 Online: {players_list}\n\n"
             f"📡 **Java-IP:** `{server_ip}`\n"
-            f"📱 **Bedrock-IP:** `{bedrock_ip}:{bedrock_port}`"
+            f"📱 **Bedrock-IP:** `{bedrock_ip}`\n"
+            f"🖧 **Port:** `{bedrock_port}`"
         )
         payload = {"content": message}
 
     except:
         message = (
             "🔴 **Server ist offline oder nicht erreichbar.**\n"
-            f"🟢 Du kannst ihn hier manuell starten:\n{start_link}\n\n"
+            f"Du kannst ihn hier manuell starten:\n{start_link}\n\n"
             f"📡 **Java-IP:** `{server_ip}`\n"
-            f"📱 **Bedrock-IP:** `{bedrock_ip}:{bedrock_port}`"
+            f"📱 **Bedrock-IP:** `{bedrock_ip}`\n"
+            f"🖧 **Port:** `{bedrock_port}`"
         )
         payload = {"content": message}
 
