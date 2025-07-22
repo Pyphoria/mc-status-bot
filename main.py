@@ -5,14 +5,13 @@ from keep_alive import keep_alive
 keep_alive()
 
 # Umgebungsvariablen
-server_ip = os.getenv("SERVER_IP")           # z. B. tblockmcserver.falixsrv.me:31703
+server_ip = os.getenv("SERVER_IP")
 webhook_url = os.getenv("WEBHOOK")
 start_link = os.getenv("START_LINK")
-bedrock_ip = os.getenv("BEDROCK_IP")         # z. B. tblockmcserver.falixsrv.me
-bedrock_port = os.getenv("BEDROCK_PORT")     # z. B. 31703
-
+bedrock_ip = os.getenv("BEDROCK_IP")        
+bedrock_port = os.getenv("BEDROCK_PORT")
 last_message = ""
-CHECK_INTERVAL = 10  # Sekunden
+CHECK_INTERVAL = 10
 
 while True:
     try:
