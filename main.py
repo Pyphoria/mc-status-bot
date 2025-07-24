@@ -37,7 +37,7 @@ while True:
             f"🎮 Online: {players_list}\n\n"
             f"📡 **Java-IP:** `{server_ip}`\n"
             f"📱 **Bedrock-IP:** `{bedrock_ip}`\n"
-            f"🖧 **Port:** `{bedrock_port}`"
+            f"🔌 **Port:** `{bedrock_port}`"
         )
         payload = {"content": message}
 
